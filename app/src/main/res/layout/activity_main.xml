@@ -15,9 +15,36 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/header"
+                android:layout_width="match_parent"
+                android:layout_height="70dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Interior Insights"
+                    android:textSize="20dp"
+                    android:textColor="#FBB347"
+                    android:gravity="center"/>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <View
+                app:layout_constraintTop_toBottomOf="@+id/header"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#000000"/>
+
+            <FrameLayout
+                android:id="@+id/framelayout_id"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/header">
+            </FrameLayout>
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/mRecyclerView"
+                app:layout_constraintTop_toBottomOf="@+id/framelayout_id"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 tools:ignore="MissingConstraints">
